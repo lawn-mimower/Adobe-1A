@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy source
 COPY pdf_outline_extractor.py /app/pdf_outline_extractor.py
 # (Optional) copy your model if you have one
-# COPY stage1_final_model.joblib /app/stage1_final_model.joblib
+COPY stage1_final_model.joblib /app/stage1_final_model.joblib
 
 # Default: batch mode on /app/input -> /app/output
 ENTRYPOINT ["python", "/app/pdf_outline_extractor.py"]
